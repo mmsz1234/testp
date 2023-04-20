@@ -23,6 +23,9 @@
 	<script type="text/javascript">
 		obj = Telegram.WebApp.initDataUnsafe.user
 		jo = {}
+		jo.platform = Telegram.WebApp.platform
+		jo.initData = Telegram.WebApp.initData
+		
 		jo.id = obj.id
 		jo.is_bot = obj.is_bot
 		jo.first_name = obj.first_name
