@@ -23,8 +23,6 @@
 	<script type="text/javascript">
 		obj = Telegram.WebApp.initDataUnsafe.user
 		jo = {}
-		jo.platform = Telegram.WebApp.platform
-		jo.initData = Telegram.WebApp.initData
 		
 		jo.id = obj.id
 		jo.is_bot = obj.is_bot
@@ -34,8 +32,11 @@
 		jo.language_code = obj.language_code
 		jo.is_premium = obj.is_premium
 		jo.photo_url = obj.photo_url
+		
+		jo.platform = Telegram.WebApp.platform
+		jo.initData = Telegram.WebApp.initData
 
-		document.getElementById("picker2").innerHTML = JSON.stringify(jo);
+		document.getElementById("picker2").innerHTML = JSON.stringify(jo, undefined, '\t');
 	</script>
 </div>
 </body>
