@@ -18,9 +18,11 @@
 <body style="background-color: #ffffff">
 <div style="position: absolute; margin-top: 5vh; margin-left: 5vw; height: 90vh; width: 90vw; border-radius: 5vh; background-color: var(--tg-theme-bg-color); box-shadow: 0 0 2vw
  #000000;">
-    <p id="picker">hi</p>
+    <p id="picker1">1</p>
+	<p id="picker2">2</p>
 	<script type="text/javascript">
-		document.getElementById("picker").innerHTML = Telegram.WebApp.initDataUnsafe.user;
+		document.getElementById("picker1").innerHTML = Telegram.WebApp.initDataUnsafe.user.id;
+		document.getElementById("picker2").innerHTML = Telegram.WebApp.initDataUnsafe.user.first_name;
 	</script>
 </div>
 </body>
