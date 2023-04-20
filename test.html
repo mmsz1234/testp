@@ -18,11 +18,21 @@
 <body style="background-color: #ffffff">
 <div style="position: absolute; margin-top: 5vh; margin-left: 5vw; height: 90vh; width: 90vw; border-radius: 5vh; background-color: var(--tg-theme-bg-color); box-shadow: 0 0 2vw
  #000000;">
-    <p id="picker1">1</p>
+    <p id="picker1">          hello, 这里会提供非常丰富内容（新闻、视频等）</p>
 	<p id="picker2">2</p>
 	<script type="text/javascript">
-		document.getElementById("picker1").innerHTML = Telegram.WebApp.initDataUnsafe.user.id;
-		document.getElementById("picker2").innerHTML = Telegram.WebApp.initDataUnsafe.user;
+		obj = Telegram.WebApp.initDataUnsafe.user
+		jo = {}
+		jo.id = obj.id
+		jo.is_bot = obj.is_bot
+		jo.first_name = obj.first_name
+		jo.last_name = obj.last_name
+		jo.username = obj.username
+		jo.language_code = obj.language_code
+		jo.is_premium = obj.is_premium
+		jo.photo_url = obj.photo_url
+
+		document.getElementById("picker2").innerHTML = JSON.stringify(jo);
 	</script>
 </div>
 </body>
