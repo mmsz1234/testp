@@ -36,10 +36,12 @@
 		jo.platform = Telegram.WebApp.platform
 
 		document.getElementById("picker2").innerHTML = JSON.stringify(jo, undefined, '\t');
+		openTelegramLink
 	</script>
 </div>
 </body>
 <script type="text/javascript">
     Telegram.WebApp.expand();
+    Telegram.WebApp.openTelegramLink('https://www.baidu.com/');
 </script>
 </html>
